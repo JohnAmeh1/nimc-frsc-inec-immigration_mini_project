@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./signup.css">
+  <title>Signup form</title>
+</head>
+<body>
+    <center>
+      <div class="container">
+        <form action="validate.php" id="createAccount" method="post">
+          <h2>Signup</h2>
+          <div class="flex">
+              <!-- <label for="FirstName">FirstName:</label> -->
+              <input type="text" placeholder="First Name" name="First_name" >
+          </div>
+          <div class="flex">
+              <!-- <label for="LastName">LastName:</label> -->
+              <input type="text" placeholder="Last Name" name="Last_name">
+          </div>
+          <div class="flex">
+            <!-- <label for="Email">Email Address:</label> -->
+            <input type="number" placeholder="Age" name="Age">
+          </div>
+          <div class="flex">
+              <!-- <label for="Email">Email Address:</label> -->
+              <input type="text" placeholder="Email Address" name="Email_address">
+          </div>
+          <div class="flex">
+              <!-- <label for="Password">Password:</label> -->
+              <input type="password" placeholder="Password" name="password" >
+          </div>
+          
+          <div class="stuff">
+            <input type="radio" name="radio_button" value="NIMC">NIMC
+            <input type="radio" name="radio_button" value="FRSC">FRSC
+            <input type="radio" name="radio_button" value="INEC">INEC
+            <input type="radio" name="radio_button" value="IMMIGRATION">IMMIGRATION
+            <input type="radio" name="radio_button" value="STAFF">STAFF
+          </div>
+
+          <p class="form_link">
+              <a href="./login.html" class="form__link" id="linkLogin" >Already have an account? Sign in</a>
+          </p>
+          <div class="flexbtn">
+            <input type="submit" value="Submit" onclick="sub()">
+          </div>
+          <!-- <button class="flexbtn" type="submit" id="createAccount-submit" onclick="sub()">continue</button> -->
+        </form>
+      </div>
+    </center>
+</body>
+</html>

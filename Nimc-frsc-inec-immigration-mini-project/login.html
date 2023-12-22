@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login.css">
+    <title>login form</title>
+</head>
+<body>
+  <center>
+    <div class="container">
+      <form action="validatelogin.php" method="post">
+        <h2>Login</h2>
+        <div class="flex">
+            <!-- <label for="Email">Email Address:</label> -->
+            <input type="text" placeholder="Email Address" name="Email_address" required>
+        </div>
+        <div class="flex">
+            <!-- <label for="Password">Password:</label> -->
+            <input type="password" placeholder="Password" name="password" required>
+        </div>
+        <div class="stuff" required>
+            <input type="radio" name="radio_button" value="NIMC">NIMC
+            <input type="radio" name="radio_button" value="FRSC">FRSC
+            <input type="radio" name="radio_button" value="INEC">INEC
+            <input type="radio" name="radio_button" value="IMMIGRATION">IMMIGRATION
+            <input type="radio" name="radio_button" value="STAFF">STAFF
+        </div>
+        
+        <p class="form_link">
+              <a href="./signup.html" class="form_link" id="linkCreateAccount">Don't have account? create account</a>
+        </p>
+        <div class="flexbtn">
+          <input type="submit" value="Submit" onclick="sub()">
+        </div>
+        <!-- <button class="flexbtn" type="submit" id="createAccount-submit" onclick="sub()">continue</button> -->
+      </form>
+    </div>
+  </center>
+  <script>
+    function sub(){
+        var Email_address = document.getElementsByName("Email_address")[0].value;
+        var Password = document.getElementsByName("password")[0].value;
+        var radio_button = document.getElementsByName("radio_button")[0].value;
+        if(Email_address == "")
+        {
+            alert("Email Address can't be empty!!");
+        }
+        else if(Password == "")
+        {
+            alert("Password can't be empty!!");
+        }  
+        else if(radio_button == "")
+        {
+            alert("Radio button can't be empty!!");
+        }  
+    }
+  </script>
+</body>
+</html>
